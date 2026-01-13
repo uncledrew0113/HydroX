@@ -1,0 +1,13 @@
+[requires]
+nlohmann_json/3.12.0
+spdlog/1.17.0
+boost/1.90.0
+paho-mqtt-cpp/1.5.3
+sqlitecpp/3.3.3
+
+[generators]
+CMakeDeps
+CMakeToolchain
+
+[layout]
+cmake_layout

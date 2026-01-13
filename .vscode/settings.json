@@ -1,0 +1,28 @@
+{
+    "clang-format.executable": "/usr/bin/clang-format-20",
+    "clangd.path": "/usr/bin/clangd-20",
+        "clangd.arguments": [
+        // 在后台自动分析文件（基于complie_commands)
+        "--background-index",
+        // 标记compelie_commands.json文件的目录位置
+        // "--compile-commands-dir=${workspaceFolder}/build/clang-ubuntu-static",
+        "--clang-tidy",
+        "--function-arg-placeholders=false",
+        "--header-insertion=never",
+        "--header-insertion-decorators",
+        // 同时开启的任务数量
+        "-j=12",
+        // 全局补全（会自动补充头文件）
+        "--all-scopes-completion",
+        // 更详细的补全内容
+        "--completion-style=detailed",
+        // pch优化的位置 disk memory
+        "--pch-storage=memory",
+        "--enable-config",
+        // clang-format style to apply by default when no .clang-format file is found
+        "--fallback-style=WebKit",
+        "--pretty",
+        "--compile-commands-dir=${workspaceFolder}/build/clang-ubuntu-static/",
+        "--query-driver=clang++",
+    ]
+}
